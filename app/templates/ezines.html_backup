@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content_title"> e-zines </div>
+
+
+<ul>
+    {%- for item in tree.children recursive %}
+        <li><a href="{{ url_for('static',filename="infosec/e-zines/"+item.name) }}">{{ item.name }}</a>
+        {%- if item.children -%}
+        {%- for child in item.children %}
+            <a href="{{ url_for('static',filename="infosec/e-zines/"+item.name+"/"+child.name) }}">{{ child.name }}</a> <!--access the childs of the parent dir -->
+              <ul>{# {{ loop(item.children) }} #}</ul>
+              {%- endfor %}
+        {%- endif %}</li>
+    {%- endfor %}
+</ul>
+
+
+
+
+
+{% endblock %}
+

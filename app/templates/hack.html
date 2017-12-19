@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content_title">information warfare </div>
+<table>
+<tr>
+<th> name </th>
+<th> type </th>
+<th> desc  </th>
+<th> date </th>
+<th> chksum </th>
+</tr>
+
+    {%- for item in tree.children recursive %}
+    <tr>    
+        <td><a href="{{ url_for('static',filename="infosec/"+item.name) }}">{{ item.name }}</a></td>
+        
+   {%- endfor %}
+    </tr>
+</table>
+
+{% endblock %}

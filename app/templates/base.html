@@ -1,0 +1,44 @@
+<html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Terminal+Dosis" />
+<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"> 
+
+
+<head>
+<title>ninth circle of shell</title>
+</head>
+
+<body>
+
+
+
+<div class="main_wrapper"><!-- MAIN WRAPPER BEGIN-->
+
+<div class="header">
+NINTH  CIRCLE OF SHELL
+<div class="header_ip_user">
+WELCOME, {% for info in info_client %} {{ info }} {% endfor %} </div>
+</div>
+<div class="content_nav"> <!--CONTENT_NAV WRAPPER BEGIN-->
+<div class="navigation">
+<div class="nav_title">Menu</div>
+<ul>
+<li><a href="{{ url_for('index') }}">home</a></li>
+<li><a href="{{ url_for('blog') }}">blog</a></li>
+<li><a href="{{ url_for('hack') }}">information warfare</a></li>
+<li><a href="{{ url_for('about') }}">about</a></li>
+</ul>
+</div>
+<div class="content">
+{% block content %}{% endblock %}
+</div>
+</div> <!--CONTENT_NAV WRAPPER ENDS-->
+<div class="footer"> 
+{{ quote.title }}<br>
+{{ quote.author }}<br>
+{{ quote.text }} 
+</div>
+</div> <!-- MAIN WRAPPER END-->
+
+</body>
+</html>

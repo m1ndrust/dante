@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="content_title">bewildered observer </div>
+
+
+{% for text in text_row %}
+	{{ text['title'] }} 
+	<br>
+	{{ text['body'] }} 
+	<br>
+	by: {{ text['author'] }} 
+{% endfor %}
+
+
+{% endblock %}
