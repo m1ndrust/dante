@@ -71,6 +71,7 @@ text-align: center;
 vertical-align: middle;
 font-size: 27px; 
 text-decoration: underline;
+margin-top:10px;
 }
 
 .footer {
@@ -78,6 +79,7 @@ font-family: "Courier New", Courier, monospace;
 width: 950px;
  height: 80px;
 color:grey;
+
 border-style: solid; 
 border-width: 1px;
  border-color: grey;
@@ -87,6 +89,13 @@ text-align: center;
 }
 
 .contact_picture {
+float: left;
+margin-left: 1em;
+margin-right: 1em;
+border:1px solid gray;
+}
+
+.welcome_picture{
 float: left;
 margin-left: 1em;
 margin-right: 1em;

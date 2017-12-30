@@ -33,10 +33,13 @@ WELCOME, {% for info in info_client %} {{ info }} {% endfor %} </div>
 {% block content %}{% endblock %}
 </div>
 </div> <!--CONTENT_NAV WRAPPER ENDS-->
-<div class="footer"> 
-{{ quote.title }}<br>
+<div class="footer">
+<div class="footer_content">
+<div class="footer_title">{{ quote.title }}</div>
+<br>
 {{ quote.author }}<br>
 {{ quote.text }} 
+</div>
 </div>
 </div> <!-- MAIN WRAPPER END-->
 
