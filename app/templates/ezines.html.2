@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content_title"> e-zines </div>
+
+<table>
+<tr>
+<th> name </th>
+<th> type </th>
+<th> desc  </th>
+<th> date </th>
+<th> chksum </th>
+</tr>
+
+    
+    {% for file in files  %}
+	<tr>
+	    <td><a href="{{ file }}">{{ file }}</a></td>
+		    {% endfor %}
+    </tr>
+</table>
+
+{{ abs_path }}
+
+{% endblock %}
+

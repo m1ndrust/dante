@@ -6,11 +6,13 @@
 
 
 {% for text in text_row %}
-	{{ text['title'] }} 
+	<div class="blog_title">{{ text['title'] }} </div>
 	<br>
-	{{ text['body'] }} 
+	<div class="blog_content">{{ text['body'] }} </div>
 	<br>
 	by: {{ text['author'] }} 
+	<br>
+	<br>
 {% endfor %}
 
 

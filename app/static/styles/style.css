@@ -63,6 +63,7 @@ width: 750px;
 min-height: 800px;/*color:white;*/ 
 background-color: rgba(8,1,1,0.95); 
 border:1px solid gray;
+word-wrap: break-word;
 }
 
 .content_title  {

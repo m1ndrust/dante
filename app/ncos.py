@@ -111,17 +111,6 @@ def ezines():
     path = "./static/infosec/e-zines"
     return render_template('ezines.html',quote=getQuote(),info_client=clientInfo(),tree=make_tree(path))
 
-@app.route('/loot', methods=['POST','GET'])
-def loot():
-    if request.method == "POST":
-        response = jsonify({
-        'ip': 1234234543,
-        'username': "asdfl"
-        })
-        response.status_code = 200
-        return response
-    return
-
 
 
 
